@@ -32,9 +32,28 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+
+    -- Insert an empty line above the current line
+    ["[<leader>"] = {
+      "<cmd>execute 'normal! O'<cr>",
+      desc = "Insert line above",
+    },
+
+    -- Insert an empty line below the current line
+    ["]<leader>"] = {
+      "<cmd>execute 'normal! o'<cr>",
+      desc = "Insert line below",
+    },
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
+
+  i = {
+    ["<C-i>"] = {
+      function() vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-x><C-o>", true, true, true), "") end,
+      desc = "Trigger LSP autosuggestions",
+    },
+  }
 }
