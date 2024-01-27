@@ -5,5 +5,9 @@ return {
     opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
       -- "lua"
     })
+
+    -- opts.auto_install = true
+    --
+    -- opts.highlight.enabled = true
   end,
 }

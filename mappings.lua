@@ -55,5 +55,14 @@ return {
       function() vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-x><C-o>", true, true, true), "") end,
       desc = "Trigger LSP autosuggestions",
     },
-  }
+  },
+
+  -- Visual mode mappings
+  -- x = {
+  --   -- Custom keybinding for pasting in visual mode without changing clipboard
+  --   ["p"] = {
+  --     "<cmd>execute '\"_dP'<cr>",
+  --     desc = "Paste without affecting clipboard",
+  --   },
+  -- },
 }
